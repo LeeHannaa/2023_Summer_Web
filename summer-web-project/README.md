@@ -9,3 +9,5 @@
 ## 🏐 현대캐피탈 배구단 SkyWalkers 메인 페이지 구현
 - 관리자 페이지로 구현하여 News와 선수 정보를 Create, Read, Update, Delete 예정
 
+## AWS배포 링크
+- http://23-summer-web.s3-website-ap-southeast-2.amazonaws.com
