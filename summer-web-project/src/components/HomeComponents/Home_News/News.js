@@ -48,14 +48,14 @@ function News() {
     const navigate = useNavigate();
 
     const handleAddButtonClick = () => {
-      navigate('/addNews'); // Replace '/add-news' with the appropriate route path of AddNews.js
+      navigate('/allNews'); // Replace '/add-news' with the appropriate route path of AddNews.js
     };
     return (
         <NewsComponent>
             <Div>
             <TextComponent>
                 <NewsFont>News<NewsKorFont>뉴스</NewsKorFont></NewsFont>
-                <AddButton onClick={handleAddButtonClick}>뉴스 추가하기</AddButton>
+                <AddButton onClick={handleAddButtonClick}>뉴스 전체보기</AddButton>
             </TextComponent>
             <ParentContainer>
                 <OneNews />

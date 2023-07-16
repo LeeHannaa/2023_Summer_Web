@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React, { useState } from 'react';
 import { FiArrowRight } from "react-icons/fi";
 
+
 const NewsComponent = styled.div`
     margin-top: 20px;
     margin-left: 50px;
