@@ -1,5 +1,11 @@
 # 2023_Summer_Web_Project
 
-## Clone Coding
-- site : https://www.noodlefoodle.com/friends/list_secret_recipe
-- 누들 푸드 나만의 레시피 페이지 구현 (레시피 Read, 레시피 등록 서비스 구현 시 Update, Create, Delete구현, 이미지 업로드)
+## 🕰️ 기간
+- 2023.07.10 ~ 08.05(4주 프로젝트)
+
+## 💻 Clone Coding
+- site : https://www.skywalkers.co.kr/
+
+## 🏐 현대캐피탈 배구단 SkyWalkers 메인 페이지 구현
+- 관리자 페이지로 구현하여 News와 선수 정보를 Create, Read, Update, Delete 예정
+

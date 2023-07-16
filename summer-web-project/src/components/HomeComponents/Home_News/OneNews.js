@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import MainNews from "../../assets/img/MainNews.jpeg";
+import MainNews from "../../../assets/img/MainNews.jpeg";
 
 const NewsComponent = styled.div`
     margin-top: 20px;

@@ -7,7 +7,7 @@ const NewsComponent = styled.div`
     display: flex; //유연하게 바꾸는 역할
     justify-content: center; // 중간으로 모으는 역할
     width: 100%; //100퍼센트의 중간
-    height: 800px; // 임의값
+    height: 600px; // 임의값
 `;
 const Div = styled.div`
     display: flex; //유연하게

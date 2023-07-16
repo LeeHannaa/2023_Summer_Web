@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import AddForm from "../components/Add_NewsInformation/AddForm";
 
 const AddNewsPageComponent = styled.div`
     margin: 0;
@@ -7,7 +8,7 @@ const AddNewsPageComponent = styled.div`
 function AddNewsPage() {
     return (
         <AddNewsPageComponent>
-            add news page!
+            <AddForm />
         </AddNewsPageComponent>
     );
 }

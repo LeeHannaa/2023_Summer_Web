@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
-import SkyWalkersImg from "../../assets/img/SkyWalkersMain.jpg";
-import NavBar from "../Navbar";
+import SkyWalkersImg from "../../../assets/img/SkyWalkersMain.jpg";
+import NavBar from "../../Navbar";
 
 const NewsComponent = styled.div`
     display: flex; //유연하게 바꾸는 역할
