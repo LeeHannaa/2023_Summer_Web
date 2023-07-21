@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React from 'react';
 import NewsList from "./NewsList";
 import OneNews from "./OneNews";
 import { useNavigate } from 'react-router-dom';
@@ -39,6 +40,18 @@ const AddButton = styled.button`
     margin-top: 20px;
     cursor: pointer;
 `;
+const PapagoButton = styled.button`
+    width: 120px;
+    height: 30px;
+    background: #52B572;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 30px;
+    cursor: pointer;
+`;
 const ParentContainer = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -50,11 +63,14 @@ function News() {
     const handleAddButtonClick = () => {
       navigate('/allNews'); // Replace '/add-news' with the appropriate route path of AddNews.js
     };
+
+    
     return (
         <NewsComponent>
             <Div>
             <TextComponent>
                 <NewsFont>News<NewsKorFont>뉴스</NewsKorFont></NewsFont>
+                <PapagoButton>영어로 번역하기</PapagoButton>
                 <AddButton onClick={handleAddButtonClick}>뉴스 전체보기</AddButton>
             </TextComponent>
             <ParentContainer>

@@ -10,7 +10,6 @@ const AddButton = styled.button`
     border: none;
     border-radius: 15px;
     margin-top: 20px;
-    margin-left: 150px;
     margin-right: 30px;
     cursor: pointer;
 `;
@@ -22,7 +21,6 @@ const CancelButton = styled.button`
     border: none;
     border-radius: 15px;
     margin-top: 20px;
-    margin-left: 30px;
     cursor: pointer;
 `;
 const Div = styled.div`
@@ -31,6 +29,11 @@ const Div = styled.div`
 const LabelText = styled.label`
     margin: 20px;
     font-size: 20px;
+`;
+const NewsIMG = styled.img`
+  width: 200px;
+  height: 200px;
+  align-items: center;
 `;
 const InputBox = styled.input`
   width: 400px;
@@ -61,12 +64,22 @@ const AddForm = ({ onAddNews }) => {
   const handleCancelButtonClick = () => {
     navigate('/allNews'); // Replace '/add-news' with the appropriate route path of AddNews.js
   };
+  const [selectedImage, setSelectedImage] = useState(null);
+  const handleImageChange = (event) => {
+    const selectedFile = event.target.files[0];
+
+    if (selectedFile) {
+      const imageUrl = URL.createObjectURL(selectedFile);
+      setSelectedImage(imageUrl);
+    }
+  };
+
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h2>SkyWalker 뉴스 추가하기</h2>
       <Div>
-        <LabelText>뉴스 링크</LabelText>
+        <LabelText>뉴스링크</LabelText>
         <InputBox
           type="text"
           name="newsLink"
@@ -76,7 +89,7 @@ const AddForm = ({ onAddNews }) => {
         />
       </Div>
       <Div>
-        <LabelText>뉴스 제목</LabelText>
+        <LabelText>뉴스제목</LabelText>
         <InputBox
           type="text"
           name="newsTitle"
@@ -85,15 +98,17 @@ const AddForm = ({ onAddNews }) => {
           required
         />
       </Div>
-      <Div>
+      <Div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
         <LabelText>카테고리</LabelText>
-        <select name="category" value={newsData.category} onChange={handleInputChange}>
-          <option value="구단뉴스">구단뉴스</option>
-          <option value="배구뉴스">배구뉴스</option>
-        </select>
+        <div class="form-floating">
+          <select class="form-select" id="floatingSelect" aria-label="Floating label select example" style={{ width: '410px', height: '55px' }}>
+            <option value="구단뉴스" selected>구단뉴스</option>
+            <option value="배구뉴스">배구뉴스</option>
+          </select>
+        </div>
       </Div>
       <Div>
-        <LabelText>날짜</LabelText>
+        <LabelText>뉴스날짜</LabelText>
         <InputBox
           type="date"
           name="date"
@@ -102,18 +117,27 @@ const AddForm = ({ onAddNews }) => {
           required
         />
       </Div>
-      <Div>
+      <Div> 
         <LabelText>이미지</LabelText>
         <InputBox
-          type="text"
-          name="newsTitle"
-          value={newsData.newsTitle}
-          onChange={handleInputChange}
+          type="file"
+          name="newsImage"
+          onChange={handleImageChange}
           required
         />
+        <br></br>
+        {selectedImage && (
+        <NewsIMG
+          src={selectedImage}
+          alt="Selected Image"
+          style={{ marginLeft: '140px' }}
+        />
+      )}
       </Div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
       <AddButton type="submit">추가</AddButton>
       <CancelButton onClick={handleCancelButtonClick}>취소</CancelButton>
+      </div>
     </form>
   );
 };
