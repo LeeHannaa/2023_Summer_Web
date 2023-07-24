@@ -56,6 +56,12 @@ const ParentContainer = styled.div`
   display: flex;
   justify-content: flex-start;
 `;
+// const TranslatedText = styled.div`
+//     margin-top: 20px;
+//     font-size: 16px;
+//     font-family: 'Pretendard','Apple SD Gothic Neo', 'Malgun Gothic', arial, sans-serif;
+//     color: #555;
+// `;
 
 function News() {
     const navigate = useNavigate();
@@ -63,7 +69,6 @@ function News() {
     const handleAddButtonClick = () => {
       navigate('/allNews'); // Replace '/add-news' with the appropriate route path of AddNews.js
     };
-
     
     return (
         <NewsComponent>
@@ -77,6 +82,7 @@ function News() {
                 <OneNews />
                 <NewsList />
             </ParentContainer>
+            {/* <TranslatedText>{translatedText}</TranslatedText> */}
             </Div>
         </NewsComponent>
     );

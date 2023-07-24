@@ -70,6 +70,7 @@ const Button = styled.button`
   border-radius: 10px;
   margin-left: 20px;
   margin-right: 24px;
+  margin-bottom: 10px;
   background: var(--gray-10, #E1E1E1);
   text-align: center;
   border: 0;
